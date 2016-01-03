@@ -14,5 +14,10 @@ my $build = Module::Build::WithXSpp->new(
     },
     extra_compiler_flags => [qw/-O2 -m64 -DNDEBUG -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -Wall -shared -fPIC -DUSE_BOOST_THREAD -Wno-unused-variable -std=c++11/],
     extra_linker_flags => [qw/-lboost_thread -lboost_system -lpthread/ ],
+    meta_merge => {
+        resources => {
+            repository => 'https://github.com/jvolkening/p5-Compress-DSRC'
+        }
+    },
 );
 $build->create_build_script;

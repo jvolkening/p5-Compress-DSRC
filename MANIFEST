@@ -8,7 +8,7 @@ include/dsrc/FastqFile.h
 include/dsrc/FastqRecord.h
 include/dsrc/Globals.h
 lib/Compress/DSRC.pm
-MANIFEST			This list of files
+MANIFEST
 README.md
 src/BitMemory.h
 src/BlockCompressor.cpp
@@ -77,3 +77,5 @@ t/foo.dsrc
 xsp/dsrc.map
 xsp/dsrc.xsp
 xsp/typemap.xsp
+META.yml
+META.json

@@ -1,5 +1,8 @@
 Revision history for Perl extension Compress::DSRC.
 
-0.01  2016-01-02
+0.002  2016-01-03
+	- Updated Build.PL compiler flags to remove Boost dependency
+
+0.001  2016-01-02
 	- initial release
 

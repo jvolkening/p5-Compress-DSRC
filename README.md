@@ -17,9 +17,8 @@ To install this module type the following:
 DEPENDENCIES
 ------------
 
-Compress::DSRC is bundled with the DSRC C++ library. Compilation requires the
-Boost system and thread libraries. There are no additional dependencies other
-than a C++ compiler on the target system.
+Compress::DSRC is bundled with the DSRC C++ library. Building requires a C++
+compiler with support for the C++11 standard (e.g. GCC 4.7 or later).
 
 
 COPYRIGHT AND LICENSE

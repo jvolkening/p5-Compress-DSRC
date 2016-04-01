@@ -2,11 +2,11 @@ sudo: false
 language: perl
 perl:
   - "5.22"
-  #- "5.20"
-  #- "5.18"
-  #- "5.16"
-  #- "5.14"
-  #- "5.12"
+  - "5.20"
+  - "5.18"
+  - "5.16"
+  - "5.14"
+  - "5.12"
 os:
   - linux
 before_install:
@@ -15,10 +15,7 @@ before_install:
 compiler:
   - gcc
 install:
-  - echo "$CXX"
   - export CXX="g++-4.8" CC="gcc-4.8"
-  #- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
-  - echo "$CXX"
 addons:
   apt:
     sources:

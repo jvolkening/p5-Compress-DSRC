@@ -10,6 +10,7 @@ include/dsrc/Globals.h
 lib/Compress/DSRC.pm
 MANIFEST
 README.md
+src/Makefile
 src/BitMemory.h
 src/BlockCompressor.cpp
 src/BlockCompressor.h
@@ -48,7 +49,6 @@ src/FileStream.cpp
 src/FileStream.h
 src/huffman.cpp
 src/huffman.h
-src/main.cpp
 src/ns.h
 src/ppport.h
 src/QualityEncoder.h
@@ -74,6 +74,8 @@ src/utils.h
 t/dsrc.t
 t/foo.fastq
 t/foo.dsrc
+t/foo.single.fastq
+t/foo.single.dsrc
 xsp/dsrc.map
 xsp/dsrc.xsp
 xsp/typemap.xsp

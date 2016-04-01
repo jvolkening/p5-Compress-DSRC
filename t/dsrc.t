@@ -3,19 +3,16 @@
 use strict;
 use warnings;
 
-use Test::More qw/no_plan/;
+use Test::More;
 use FindBin;
 use Digest::MD5;
 use Compress::DSRC;
 
 
-# There is a bug in the C++ library related to single-record files, so disable
-# those tests for now
-
-#my @fn_compressed   = qw/foo.dsrc foo.single.dsrc/;
-#my @fn_uncompressed = qw/foo.fastq foo.single.fastq/;
-my @fn_compressed   = qw/foo.dsrc/;
-my @fn_uncompressed = qw/foo.fastq/;
+# There is a bug in the stable source relating to single-record files.
+# A patched source is included - we explicity test such files here as well
+my @fn_compressed   = qw/foo.dsrc foo.single.dsrc/;
+my @fn_uncompressed = qw/foo.fastq foo.single.fastq/;
 
 chdir $FindBin::Bin;
 
@@ -33,11 +30,11 @@ $settings_lossy->set_qual_level(2);
 $settings_lossy->set_lossy(1);
 $settings_lossy->set_buffer_size(128);
 
-my $m = Compress::DSRC::Module->new();
-my $r = Compress::DSRC::Reader->new();
-my $w = Compress::DSRC::Writer->new();
-
 for my $i (0..$#fn_compressed) {
+
+    my $m = Compress::DSRC::Module->new();
+    my $r = Compress::DSRC::Reader->new();
+    my $w = Compress::DSRC::Writer->new();
 
     my $fn_c = $fn_compressed[$i];
     my $fn_u = $fn_uncompressed[$i];
@@ -122,5 +119,6 @@ for my $i (0..$#fn_compressed) {
 
 }
 
+done_testing();
 exit;
 

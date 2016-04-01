@@ -1,6 +1,7 @@
+use 5.012;
 use strict;
 use warnings;
-use 5.12.0;
+
 use Module::Build::WithXSpp;
 
 my $build = Module::Build::WithXSpp->new(

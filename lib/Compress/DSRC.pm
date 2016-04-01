@@ -1,10 +1,10 @@
 package Compress::DSRC;
 
-use 5.010001;
+use 5.012;
 use strict;
 use warnings;
 
-our $VERSION = '0.002';
+our $VERSION = "0.003";
 
 require XSLoader;
 XSLoader::load('Compress::DSRC', $VERSION);

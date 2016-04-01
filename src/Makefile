@@ -1,4 +1,4 @@
-all: lib bin clean
+all: lib clean
 
 APP_NAME = dsrc
 LIB_NAME = libdsrc.a
@@ -32,10 +32,6 @@ LIB_OBJS = DsrcArchive.o \
 
 .cpp.o:
 	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-bin: main.o $(APP_OBJS)
-	$(CXX) $(CXXFLAGS) -o $(APP_NAME) main.o $(APP_OBJS) $(DEP_LIB_DIRS) $(DEP_LIBS)
-	strip $(APP_NAME)
 
 lib: $(APP_OBJS) $(LIB_OBJS)
 	ar $(AR_FLAGS) $(LIB_NAME) $(APP_OBJS) $(LIB_OBJS)

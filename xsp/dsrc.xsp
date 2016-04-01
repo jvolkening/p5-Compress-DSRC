@@ -86,7 +86,7 @@
 
 };
 
-%name{Compress::DSRC::FastqFile} class FastqFile {
+%name{Compress::DSRC::FastqFile} class FastqFileRecordsReader {
 
     %name{new} FastqFile();
     ~FastqFile();

@@ -1,3 +1,4 @@
+sudo: false
 language: perl
 perl:
   - "5.22"
@@ -10,3 +11,14 @@ os:
   - linux
 before_install:
   - "cpanm Module::Build::WithXSpp"
+compiler:
+  - gcc
+install:
+- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+addons:
+  apt:
+    #sources:
+    #- ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8

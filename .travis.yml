@@ -8,3 +8,5 @@ perl:
   - "5.12"
 os:
   - linux
+before_install:
+  - "cpanm Module::Build::WithXSpp"

@@ -62,10 +62,10 @@ Per-record (de)compression
 
     my $record = Compress::DSRC::Record->new;
     while ($reader->read_record($record) {
-        print $reader->get_tag,      "\n";
-        print $reader->get_sequence, "\n";
-        print $reader->get_plus,     "\n";
-        print $reader->get_quality,  "\n";
+        print $record->get_tag,      "\n";
+        print $record->get_sequence, "\n";
+        print $record->get_plus,     "\n";
+        print $record->get_quality,  "\n";
         # or, more likely, do something else with record
     }
     $reader->finish;

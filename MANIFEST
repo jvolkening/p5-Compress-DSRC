@@ -79,3 +79,5 @@ t/foo.single.dsrc
 xsp/dsrc.map
 xsp/dsrc.xsp
 xsp/typemap.xsp
+META.yml
+META.json

@@ -1,6 +1,11 @@
 Compress::DSRC
 ====
 
+[![Build Status](https://travis-ci.org/jvolkening/p5-Compress-DSRC.svg?branch=master)](https://travis-ci.org/jvolkening/p5-Compress-DSRC)
+[![Coverage Status](https://coveralls.io/repos/github/jvolkening/p5-Compress-DSRC/badge.svg?branch=master)](https://coveralls.io/github/jvolkening/p5-Compress-DSRC?branch=master)
+[![CPAN version](https://badge.fury.io/pl/Compress-DSRC.svg)](https://badge.fury.io/pl/Compress-DSRC)
+
+
 Perl bindings for the DSRC compression library
 
 INSTALLATION

@@ -12,6 +12,7 @@ os:
 before_install:
   - "cpanm Module::Build::WithXSpp"
   - "cpanm ExtUtils::Typemaps::ObjectMap"
+  - eval $(curl https://travis-perl.github.io/init) --auto
 compiler:
   - gcc
 install:
@@ -23,3 +24,7 @@ addons:
     packages:
     - gcc-4.8
     - g++-4.8
+matrix:
+  include:
+    - perl: 5.20
+      env: COVERAGE=1   # enables coverage+coveralls reporting

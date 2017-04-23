@@ -9,6 +9,10 @@ my $build = Module::Build::WithXSpp->new(
     license             => 'gpl',
     dist_author         => q{Jeremy Volkening <jdv*at*base2bio*dot*com>},
     needs_compiler      => 1,
+    configure_requires => {
+        'Module::Build' => '0',
+        'Module::Build::WithXSpp' => '0',
+    },
     build_requires => {
         'Test::More' => 0,
         'ExtUtils::Typemaps::ObjectMap' => '0',
